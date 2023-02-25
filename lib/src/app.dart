@@ -7,7 +7,9 @@ class MyApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    // goRouterProvider의 상태가 변경되면, MyApp이 rebuild됨
     final goRouter = ref.watch(goRouterProvider);
+
     return MaterialApp.router(
       routerConfig: goRouter,
       theme: ThemeData(

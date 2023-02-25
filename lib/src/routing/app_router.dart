@@ -37,6 +37,10 @@ enum AppRoute {
   account,
 }
 
+// goRouterProvider의 라우트 상태가 변경될 것 같지는 않지만 (선언형이기 때문에),
+// 여기서 보고있는 (proxy) authRepository(인증)나 onboardingRepository(최초 실행 여부)의 상태가 변경될 때,
+// goRouterProvider를 통해 MyApp이 rebuild된다!
+
 final goRouterProvider = Provider<GoRouter>((ref) {
   final authRepository = ref.watch(authRepositoryProvider);
   final onboardingRepository = ref.watch(onboardingRepositoryProvider);

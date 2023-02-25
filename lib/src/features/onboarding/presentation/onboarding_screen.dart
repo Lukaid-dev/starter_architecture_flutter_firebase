@@ -22,7 +22,7 @@ class OnboardingScreen extends ConsumerWidget {
           children: [
             Text(
               'Track your time.\nBecause time counts.',
-              style: Theme.of(context).textTheme.headline5,
+              style: Theme.of(context).textTheme.headlineSmall,
               textAlign: TextAlign.center,
             ),
             FractionallySizedBox(
